@@ -17,7 +17,7 @@ public class AnimalModel {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	@Size(min = 3, max = 50) @NotNull
 	private String animal;
 
@@ -26,18 +26,18 @@ public class AnimalModel {
 
 	@Column(name = "recebeu_alta") @NotNull
 	private Boolean recebeuAlta;
-	
+
 	@Column(name = "diagnostico")
 	private String diagnostico;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_veterinario")
+	@JoinColumn(name = "id_veterinario", nullable = false) 
 	private VeterinarioModel veterinario;
-	
+
 	public Integer getId() {
 		return this.id;
 	}
-	
+
 	public void setId(Integer id) {
 		this.id = id;
 	}

@@ -18,10 +18,10 @@ public class VeterinarioModel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@Size(max = 50) @NotBlank(message = "Não pode estar vazio")
+	@Size(max = 50) @NotBlank(message = "(nomeVeterinario) Não pode estar vazio")
 	private String nomeVeterinario;
 
-	@Size(max = 50) @NotBlank(message = "Não pode estar vazio")
+	@Size(max = 50) @NotBlank(message = "(especializacao) Não pode estar vazio")
 	private String especializacao;
 
 	@OneToMany(mappedBy = "veterinario")
